@@ -1,0 +1,10 @@
+parameters:
+    pim_enhanced_connector.normalizer.flat.family.class: Pim\Bundle\EnhancedConnectorBundle\Normalizer\FamilyFlatNormalizer
+
+services:
+    pim_enhanced_connector.normalizer.flat.family:
+        class: %pim_enhanced_connector.normalizer.flat.family.class%
+        arguments:
+            - '@pim_serializer.normalizer.label_translation'
+            - '@pim_serializer'
+            - '@pim_catalog.manager.locale'

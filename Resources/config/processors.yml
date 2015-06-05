@@ -1,0 +1,8 @@
+parameters:
+    pim_enhanced_connector.processor.normalization.family.class: Pim\Bundle\EnhancedConnectorBundle\Processor\Normalization\FamilyProcessor
+
+services:
+    pim_enhanced_connector.processor.normalization.family:
+        class: %pim_enhanced_connector.processor.normalization.family.class%
+        arguments:
+            - '@pim_enhanced_connector.normalizer.flat.family'
