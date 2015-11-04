@@ -34,6 +34,13 @@ pim_enhanced_connector:
                     onlyComplete: Exporte seulement les produits complets
                     onlyUncomplete: Exporte seulement produits incomplets
                     doNotApply: Exporte les produits quelque soit leur complétude
+            categorizationCondition:
+                label: Categorization condition
+                help: Define if and how the categorization condition will apply on the product selection
+                choices:
+                    onlyCategorized: Export only categorized products
+                    onlyNoncategorized: Export only non-categorized products
+                    doNotApply: Export products regardless of their categorization
         family_processor:
             locale:
                 label: Language du label
