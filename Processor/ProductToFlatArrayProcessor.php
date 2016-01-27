@@ -23,16 +23,18 @@ class ProductToFlatArrayProcessor extends BaseProductToFlatArrayProcessor
     /**
      * @param Serializer                   $serializer
      * @param ChannelManager               $channelManager
-     * @param string                       $uploadDirectory
+     * @param array                        $mediaAttributeTypes
+     * @param ProductBuilderInterface|null $productBuilder
      * @param ObjectDetacherInterface|null $objectDetacher
      */
     public function __construct(
         Serializer $serializer,
         ChannelManager $channelManager,
-        $uploadDirectory,
+        array $mediaAttributeTypes,
+        ProductBuilderInterface $productBuilder = null,
         ObjectDetacherInterface $objectDetacher = null
     ) {
-        parent::__construct($serializer, $channelManager, $uploadDirectory);
+        parent::__construct($serializer, $channelManager, $mediaAttributeTypes, $productBuilder);
 
         $this->objectDetacher = $objectDetacher;
     }
