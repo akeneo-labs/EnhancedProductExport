@@ -5,7 +5,7 @@ filter:
 build:
     environment:
         php:
-            version: '5.6'
+            version: '7.0'
             ini:
                 'memory_limit': '3G'
     tests:
