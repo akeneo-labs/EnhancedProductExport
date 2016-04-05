@@ -1,6 +1,7 @@
 # 1.2 - ?
 ## New feature
 - Compatibility with Akeneo PIM 1.5
+- Extract PimGento specificities to its own connector : [PimGentoConnectorBundle](https://github.com/akeneo-labs/PimGentoConnectorBundle)
 
 ## Improvements
 - Detach products after having read them instead of doing it in the processor
