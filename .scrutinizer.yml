@@ -16,6 +16,11 @@ build:
                 file: 'coverage.clover'
                 format: 'php-clover'
 
+checks:
+    php:
+        code_rating: true
+        duplication: true
+
 tools:
     php_analyzer: false
     php_mess_detector:
