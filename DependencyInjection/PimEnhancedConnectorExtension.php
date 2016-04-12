@@ -25,6 +25,7 @@ class PimEnhancedConnectorExtension extends Extension
         $loader->load('processors.yml');
         $loader->load('query_builder.yml');
         $loader->load('readers.yml');
+        $loader->load('writers.yml');
 
         $this->loadStorageDriver($container);
     }
