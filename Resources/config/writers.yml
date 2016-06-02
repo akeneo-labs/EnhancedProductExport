@@ -1,0 +1,7 @@
+services:
+    pim_enhanced_connector.writer.csv_multiple:
+        class: Pim\Bundle\EnhancedConnectorBundle\Writer\File\MultipleCsvWriter
+        arguments:
+            - '@pim_connector.writer.file.file_path_resolver'
+            - '@akeneo_buffer.factory.json_file_buffer'
+            - '@pim_connector.writer.file.file_exporter'

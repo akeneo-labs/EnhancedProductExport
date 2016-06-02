@@ -14,6 +14,43 @@ connector:
                     parameters:
                         batch_size: 10
 
+        enhanced_csv_multiple:
+            title: 'jml multiple'
+            type:  export
+            steps:
+                export_family:
+                    title:     'export family'
+                    services:
+                        reader:    pim_base_connector.reader.orm.family
+                        processor: pim_enhanced_connector.processor.family_to_flat_array
+                        writer:    pim_base_connector.writer.file.csv
+                export2:
+                    title: 'export2'
+                    services:
+                        reader:    pim_base_connector.reader.doctrine.product
+                        processor: pim_base_connector.processor.product_to_flat_array
+                        writer:    pim_enhanced_connector.writer.csv_multiple
+                    parameters:
+                        batch_size: 10
+
+        pimgento_multiple_export:
+            title: 'pimgento multiple'
+            type:  export
+            steps:
+                export_family:
+                    title:     'export family'
+                    services:
+                        reader:    pim_base_connector.reader.orm.family
+                        processor: pim_enhanced_connector.processor.family_to_flat_array
+                        writer:    pim_base_connector.writer.file.csv
+
+                export_attributes:
+                    title:     'export attributes'
+                    services:
+                        reader:    pim_base_connector.reader.orm.attribute
+                        processor: pim_enhanced_connector.processor.attribute_to_flat_array
+                        writer:    pim_base_connector.writer.file.csv
+
         pimgento_csv_family_export:
             title: pim_enhanced_connector.export.pimgento.family.title
             type:  export
