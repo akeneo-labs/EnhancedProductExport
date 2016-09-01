@@ -21,7 +21,7 @@ class AttributeProcessor implements ItemProcessorInterface
     /**
      * @param Processor $baseProcessor
      */
-    public function __construct(Processor $baseProcessor)
+    public function __construct(ItemProcessorInterface $baseProcessor)
     {
         $this->baseProcessor = $baseProcessor;
     }
