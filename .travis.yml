@@ -14,7 +14,7 @@ before_install:
     - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 install:
-    - composer install --no-interaction --no-scripts --prefer-dist -vv
+    - composer install --no-interaction --no-scripts --prefer-dist
 
 script:
     - ./bin/phpspec run
